@@ -1,0 +1,107 @@
+@use '../utils/' as *;
+
+.services {
+	font-size: 1rem;
+	padding: 0 0 5rem;
+	height: auto;
+
+	@include breakpointMobile(991px) {
+		padding: 5rem 0 15rem;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: block;
+		margin-top: 5rem;
+		height: auto;
+
+		@include breakpointMobile(991px) {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
+	&__heading {
+		padding: 0 0 2.5rem 0;
+		h2 {
+			margin-bottom: 2rem;
+		}
+
+		@include breakpointMobile(991px) {
+			position: sticky;
+			top: 150px;
+			border-right: 1px solid $text-gray;
+			padding: 0 4rem 0 0;
+			flex: 1;
+		}
+	}
+	&__content {
+		@include breakpointMobile(991px) {
+			flex: 1;
+		}
+
+		@include breakpointMobile(991px) {
+			padding: 0 0 0 4rem;
+		}
+	}
+
+	&__item {
+		padding: 2.5rem 0 2.5rem;
+		border-bottom: 1px solid $text-gray;
+		border-top: 1px solid $text-gray;
+
+		@include breakpointMobile(768px) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			border-top: none;
+			padding: 0 0 2.5rem;
+		}
+
+		&__content {
+			@include breakpointMobile(768px) {
+				grid-column: 1/4;
+				grid-row: 1/2;
+				align-self: center;
+				padding: 5rem 0;
+			}
+
+			h4 {
+				font-size: 0.6em;
+				color: $text-gray;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+			}
+			h3 {
+				padding: 1rem 0;
+				@include breakpointDesktop(768px) {
+					br {
+						display: none;
+					}
+				}
+			}
+
+			p {
+				padding: 0 0 2.5rem 0;
+
+				@include breakpointMobile(768px) {
+					padding: 0 18rem 0 0;
+				}
+
+				@include breakpointMobile(991px) {
+					padding: 0 12rem 0 0;
+				}
+			}
+		}
+
+		&__image {
+			z-index: -1;
+			grid-column: 3/5;
+			grid-row: 1/2;
+			opacity: 0.8;
+		}
+
+		@include breakpointMobile(768px) {
+			padding: 2.5rem 0;
+		}
+	}
+}
