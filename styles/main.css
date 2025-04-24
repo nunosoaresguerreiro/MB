@@ -409,6 +409,13 @@ html {
     font-size: 2.25em;
   }
 }
+
+@media (max-width: 480px) {
+  .hero__slider__content-header h1 {
+    padding-top: 11rem;
+  }
+}
+
 @media (max-width: 991px) {
   .hero__slider__content-header {
     text-align: center;
