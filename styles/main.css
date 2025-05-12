@@ -250,7 +250,7 @@ html {
   border-bottom: none;
 }
 .navbar__logo img {
-  width: 125px;
+  width: 100px;
 }
 .navbar__menu {
   display: flex;
